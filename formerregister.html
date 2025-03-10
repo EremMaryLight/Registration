@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./register.js"></script>
 </head>
 <body class="bg-gray-100 flex justify-center items-center h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg w-96">
@@ -19,31 +20,24 @@
                 <label for="username" class="block text-gray-700 font-semibold">Username</label>
                 <input type="text" id="username" name="username" placeholder="Your Username"
                     class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" required>
-                    <p class="text-[red]" id="error1"></p>
             </div>
             
             <!-- Email -->
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-semibold">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" required>
-                <p class="text-[red]" id="error2"></p>
+                <input type="email" id="email" name="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" required>
             </div>
 
             <!-- Password -->
             <div class="mb-4">
                 <label for="password" class="block text-gray-700 font-semibold">Password</label>
-                <div class="relative w-full flex items-center">
-                    <input type="password" id="password" name="password" placeholder="" 
-                        class="w-full h-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2 pr-10" 
+                <div class="relative w-full">
+                    <input type="password" id="password" name="password" placeholder="● ● ● ● ● ● " 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2 pr-10" 
                         required>
-                    <div class="hidden slashed">
-                        <button id="slash" onclick="closeEye()" type="button" class="fas fa-eye-slash text-[20px] absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></button>
-                    </div>
-                    <div class="eyeslash">
-                        <button onclick="openEye()" id="openeyes" type="button" class="fas fa-eye text-[20px] absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></button>
-                    </div>
+                    <span class="fas fa-eye-slash text-[20px] absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></span>
                 </div>
-                <p class="text-[red]" id="error3"></p>
                 
             </div>
 
@@ -55,7 +49,7 @@
 
             <!-- Submit Button -->
             <div class="flex justify-center">
-                <button type="button" onclick="valLogin()"
+                <button type="submit"
                     class="w-full py-2 px-4 bg-[#000000] text-white rounded-md hover:bg-blue-600 transition duration-200">Log in</button>
             </div>
         </form>
@@ -64,7 +58,5 @@
             <p class="text-gray-600">New User? <a href="#" class="text-blue-500 decoration-underline">Create Account</a></p>
         </div>
     </div>
-
-    <script src="./register.js"></script>
 </body>
 </html>
