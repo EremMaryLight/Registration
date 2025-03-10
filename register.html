@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <div class="flex justify-end">
+            <img src="./images/Star.png" alt="">
+        </div>
+        <h2 class="text-2xl font-bold text-center text-[#000000] mb-6">Create Account</h2>
+        <form action="#" method="POST">
+            <!-- Username -->
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700 font-semibold">Username</label>
+                <input type="text" id="username" name="username" placeholder="Your Username"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" required>
+            </div>
+            
+            <!-- Email -->
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-semibold">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2" required>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-semibold">Password</label>
+                <div class="flex align-center justify-between ">
+                    <input type="password" id="password" name="password" placeholder="Your Password"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2 " required> <span class="fas fa-eye-slash text-[10px]"></span>
+                </div>
+            </div>
+
+            <!-- Terms and Privacy Policy -->
+            <div class="flex flex-row items-center mb-4 ">
+                <span class="fas fa-circle-check"> </span>
+                <p class="text-gray-600">I accept the <a href="#" class="text-blue-500">terms</a> and <a href="#" class="text-blue-500">privacy policy</a></p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-[#000000] text-white rounded-md hover:bg-blue-600 transition duration-200">Log in</button>
+            </div>
+        </form>
+
+        <div class="mt-4 text-center">
+            <p class="text-gray-600">New User? <a href="#" class="text-blue-500">Create Account</a></p>
+        </div>
+    </div>
+</body>
+</html>
