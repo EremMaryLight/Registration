@@ -31,15 +31,18 @@
             <!-- Password -->
             <div class="mb-4">
                 <label for="password" class="block text-gray-700 font-semibold">Password</label>
-                <div class="flex align-center justify-between ">
-                    <input type="password" id="password" name="password" placeholder="Your Password"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2 " required> <span class="fas fa-eye-slash text-[10px]"></span>
+                <div class="relative w-full">
+                    <input type="password" id="password" name="password" placeholder="● ● ● ● ● ● " 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2 pr-10" 
+                        required>
+                    <span class="fas fa-eye-slash text-[20px] absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></span>
                 </div>
+                
             </div>
 
             <!-- Terms and Privacy Policy -->
             <div class="flex flex-row items-center mb-4 ">
-                <span class="fas fa-circle-check"> </span>
+                <span class="fas fa-circle-check"> <button></button></span>
                 <p class="text-gray-600">I accept the <a href="#" class="text-blue-500">terms</a> and <a href="#" class="text-blue-500">privacy policy</a></p>
             </div>
 
@@ -51,7 +54,7 @@
         </form>
 
         <div class="mt-4 text-center">
-            <p class="text-gray-600">New User? <a href="#" class="text-blue-500">Create Account</a></p>
+            <p class="text-gray-600">New User? <a href="#" class="text-blue-500 decoration-underline">Create Account</a></p>
         </div>
     </div>
 </body>
