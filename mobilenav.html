@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="./mobilenav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="flex justify-between items-center p-4 h-[40px] p-12 shadow-lg">
+        <!-- Logo Section -->
+        <div><img src="./images/logo.png" class="w-[90px] h-[90px] md:h-[95px] md:w-[150px]" alt="Logo"></div>
+        
+        <!-- Menu Section: Hidden on mobile and shown on medium screens -->
+        <div class="hidden md:block flex md:flex-row space-x-6 list-none gap-10">
+            <button><li class="text-xl">Shop</li></button>
+            <button><li class="text-xl">Men</li></button>
+            <button><li class="text-xl">Women</li></button>
+            <button><li class="text-xl">Kids</li></button>
+        </div>
+
+        <!-- Hamburger Icon: Only visible on mobile view -->
+        <div class="md:hidden text-3xl" id="hamburgerIcon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Mobile Menu: Hidden by default, will show when hamburger icon is clicked -->
+    <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-4 items-center mt-4 justify-end list-none">
+        <button><li class="text-xl">Shop</li></button>
+        <button><li class="text-xl">Men</li></button>
+        <button><li class="text-xl">Women</li></button>
+        <button><li class="text-xl">Kids</li></button>
+    </div>
+
+   <div class="p-10 flex flex-col justify-center items-center">
+    <form class="flex flex-col gap-10 bg-gray-100 w-[50%] justify-center items-center">
+        <label>Enter Your Name:</label>
+        <input id="data" type="text" placeholder="your name" class="border-black border-2 w-[200px]">
+        <button type="button" id="sent" onclick="getName()" class="w-[100px] h-[30px] bg-blue-600 text-white rounded-lg">Submit</button>
+    </form>
+    
+    <h1 id="welcome"></h1>
+    
+    <script>
+        function getName() {
+            const data = document.getElementById("data").value; // Get the value of the input field
+            if (data !== "") {
+                document.getElementById("welcome").innerHTML = `Welcome ${data}`;
+            } else {
+                alert("Please enter your name!");
+            }
+        }
+           // Toggle menu visibility on mobile view
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+    
+
+</body>
+</html>
